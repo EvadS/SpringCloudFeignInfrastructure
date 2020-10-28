@@ -15,6 +15,9 @@ ribbon:
   maxAutoRetries: 1
   maxAutoRetriesNextServer: 1
 
+#turn on  Hystrix
 feign:
   hystrix:
     enabled: true
+
+
