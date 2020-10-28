@@ -25,6 +25,14 @@ bootRun {
     systemProperties = System.properties
 }
 
+bootJar {
+    mainClassName = 'com.spring.cloud.se.ServiceDiscoveryApplication'
+    launchScript {
+        properties 'logFilename': 'example-app.log'
+    }
+
+}
+
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"

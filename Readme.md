@@ -31,3 +31,5 @@ eureka-song-library
 	cd eureka-song-player
 	./gradlew bootRun   
 ```
+
+Декларативный REST-клиент

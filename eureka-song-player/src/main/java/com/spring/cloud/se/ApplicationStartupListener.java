@@ -20,38 +20,41 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * Rest Template implementation
+ */
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class ApplicationStartupListener
-        implements ApplicationListener<ContextRefreshedEvent> {
-
-    private static final RestTemplate REST_TEMPLATE = new RestTemplate();
-    private static final Random RANDOM = new Random();
-
-    private final DiscoveryClient discoveryClient;
-
-    @Override
-    public void onApplicationEvent(ContextRefreshedEvent event) {
-        for (int id = 1; id < 1000; id++) {
-            sleep();
-            getSongById(id);
-        }
-    }
-
-    private void getSongById(int id) {
-        List<ServiceInstance> instances = discoveryClient.getInstances("song-library");
-        ServiceInstance serviceInstance = instances.get(RANDOM.nextInt(instances.size()));
-        Song song = REST_TEMPLATE.getForEntity(
-                serviceInstance.getUri() + "/songs/" + id, Song.class).getBody();
-        log.info("Retrieved song with discovery client: " + song);
-    }
-
-    private void sleep() {
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            log.error("Failed to create delay.", e);
-        }
-    }
+public class ApplicationStartupListener {
+//        implements ApplicationListener<ContextRefreshedEvent> {
+//
+//    private static final RestTemplate REST_TEMPLATE = new RestTemplate();
+//    private static final Random RANDOM = new Random();
+//
+//    private final DiscoveryClient discoveryClient;
+//
+//    @Override
+//    public void onApplicationEvent(ContextRefreshedEvent event) {
+//        for (int id = 1; id < 1000; id++) {
+//            sleep();
+//            getSongById(id);
+//        }
+//    }
+//
+//    private void getSongById(int id) {
+//        List<ServiceInstance> instances = discoveryClient.getInstances("song-library");
+//        ServiceInstance serviceInstance = instances.get(RANDOM.nextInt(instances.size()));
+//        Song song = REST_TEMPLATE.getForEntity(
+//                serviceInstance.getUri() + "/songs/" + id, Song.class).getBody();
+//        log.info("Retrieved song with discovery client: " + song);
+//    }
+//
+//    private void sleep() {
+//        try {
+//            TimeUnit.SECONDS.sleep(1);
+//        } catch (InterruptedException e) {
+//            log.error("Failed to create delay.", e);
+//        }
+//    }
 }

@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 public class SongsProvider {
 
     private static final List<Song> SONGS = Arrays.asList(
-            new Song("Hysteria", "Muse"),
-            new Song("Hells Bells", "AC/DC"),
-            new Song("Stairway to Heaven", "Led Zeppelin"),
+            new Song("Hysteria ", "Muse"),
+            new Song("Hells Bells ", "AC/DC"),
+            new Song("Stairway to Heaven ", "Led Zeppelin"),
             new Song("In the End", "Linkin Park"),
             new Song("Sound of Silence", "Disturbed"),
             new Song("Beat It", "Michael Jackson"),

@@ -3,9 +3,18 @@ server:
 
 spring:
   application:
-    name: song-player
+    name: song-player-feign
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+ribbon:
+  serverListRefreshInterval: 1000
+  maxAutoRetries: 1
+  maxAutoRetriesNextServer: 1
+
+feign:
+  hystrix:
+    enabled: true
