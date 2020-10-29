@@ -1,0 +1,16 @@
+server:
+  port: 902
+
+spring:
+  application:
+    name: empl-client
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+feign:
+  hystrix:
+    enabled: true # Turn on Feign's fuse function
