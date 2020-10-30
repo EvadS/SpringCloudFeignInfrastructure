@@ -17,8 +17,6 @@ public interface RemoteCallService {
     @RequestMapping(method=RequestMethod.GET, value="/products/all")
     List<Product> getData();
 
-  //  @GetMapping("/products/{id}")
-
 
     @RequestMapping(value = "/products/{id}", method = RequestMethod.GET, produces = "application/json",
             consumes = MediaType.APPLICATION_JSON_VALUE)
