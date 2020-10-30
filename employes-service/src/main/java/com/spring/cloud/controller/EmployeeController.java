@@ -29,7 +29,7 @@ import io.swagger.annotations.ApiResponses;
 
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/employee")
 @Api(value="Employee Management System", description="Operations pertaining to employee in Employee Management System")
 public class EmployeeController {
     @Autowired
