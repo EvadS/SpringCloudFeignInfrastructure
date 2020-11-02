@@ -32,4 +32,12 @@ eureka-song-library
 	./gradlew bootRun   
 ```
 
-Декларативный REST-клиент
+Запуск через make 
+В make особый тип отступов. TAB вместо пробелов. 
+
+make [Инструкция]
+
+```bash
+	make up
+```
+
