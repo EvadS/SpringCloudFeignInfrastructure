@@ -1,4 +1,19 @@
-Service Discovery с Netflix Eureka
+# Spring cloud discovery and OpenFeign system
+
+### Languages 
+* kotlin 
+* java 
+
+## Build tool
+* gradle 
+* maven
+
+### Program stack 
+Eureka server
+Eureka client
+OpenFiegn (addional sample with file upload).
+
+## Discovery с Netflix Eureka
 
 
 Service Discovery
